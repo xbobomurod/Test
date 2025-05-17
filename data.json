@@ -1,0 +1,33 @@
+{
+  "user": {
+    "name": "Foydalanuvchi",
+    "email": "user@example.com",
+    "settings": {
+      "emailNotifications": true,
+      "darkMode": false,
+      "uzbekLanguage": true,
+      "soundEffects": true,
+      "autoSave": true,
+      "fontSize": "medium",
+      "theme": "light"
+    }
+  },
+  "testResults": [
+    {
+      "testName": "JavaScript Asoslari",
+      "date": "2024-03-20T10:30:00",
+      "correctAnswers": 15,
+      "wrongAnswers": 5,
+      "totalQuestions": 20,
+      "score": 75,
+      "timeSpent": 1800
+    }
+  ],
+  "statistics": {
+    "totalTests": 1,
+    "passedTests": 1,
+    "averageScore": 75,
+    "totalCorrectAnswers": 15,
+    "totalWrongAnswers": 5
+  }
+} 

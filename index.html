@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Online Testing Platform" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Test Tizimi</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav-container">
+        <div class="logo">
+          <a href="/">TestPro</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="index.html#tests">Tests</a></li>
+          <li><a href="results.html">Results</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="dashboard" class="dashboard-section">
+        <div class="container">
+          <h1>Welcome to TestPro</h1>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <h3>Available Tests</h3>
+              <p class="stat-number">12</p>
+            </div>
+            <div class="stat-card">
+              <h3>Completed</h3>
+              <p class="stat-number">5</p>
+            </div>
+            <div class="stat-card">
+              <h3>Average Score</h3>
+              <p class="stat-number">85%</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tests" class="tests-section">
+        <div class="container">
+          <h2>Available Tests</h2>
+          <div class="test-filters">
+            <button class="filter-btn active">Barchasi</button>
+            <button class="filter-btn">Programming</button>
+            <button class="filter-btn">Mathematics</button>
+            <button class="filter-btn">Logic</button>
+          </div>
+          <div class="tests-grid">
+            <div class="test-card">
+              <div class="test-header">
+                <h3>JavaScript Asoslari</h3>
+                <span class="test-duration">30 daqiqa</span>
+              </div>
+              <p class="test-description">
+                JavaScript dasturlash tilining asosiy tushunchalari
+              </p>
+              <div class="test-meta">
+                <span class="test-level">Programming</span>
+                <span class="test-questions">20 Savol</span>
+              </div>
+              <button class="btn btn-primary start-test">
+                Testni boshlash
+              </button>
+            </div>
+
+            <div class="test-card">
+              <div class="test-header">
+                <h3>Python Dasturlash</h3>
+                <span class="test-duration">45 daqiqa</span>
+              </div>
+              <p class="test-description">
+                Python dasturlash tili va muammolarni yechish
+              </p>
+              <div class="test-meta">
+                <span class="test-level">Programming</span>
+                <span class="test-questions">25 Savol</span>
+              </div>
+              <button class="btn btn-primary start-test">
+                Testni boshlash
+              </button>
+            </div>
+
+            <div class="test-card">
+              <div class="test-header">
+                <h3>Ma'lumotlar Strukturasi</h3>
+                <span class="test-duration">60 daqiqa</span>
+              </div>
+              <p class="test-description">
+                Dasturlashda ishlatiladigan ma'lumotlar strukturasi
+              </p>
+              <div class="test-meta">
+                <span class="test-level">Programming</span>
+                <span class="test-questions">30 Savol</span>
+              </div>
+              <button class="btn btn-primary start-test">
+                Testni boshlash
+              </button>
+            </div>
+
+            <div class="test-card">
+              <div class="test-header">
+                <h3>Algebra</h3>
+                <span class="test-duration">40 daqiqa</span>
+              </div>
+              <p class="test-description">Algebra va matematik formulalar</p>
+              <div class="test-meta">
+                <span class="test-level">Mathematics</span>
+                <span class="test-questions">25 Savol</span>
+              </div>
+              <button class="btn btn-primary start-test">
+                Testni boshlash
+              </button>
+            </div>
+
+            <div class="test-card">
+              <div class="test-header">
+                <h3>Geometriya</h3>
+                <span class="test-duration">35 daqiqa</span>
+              </div>
+              <p class="test-description">
+                Geometrik shakllar va ularning xususiyatlari
+              </p>
+              <div class="test-meta">
+                <span class="test-level">Mathematics</span>
+                <span class="test-questions">20 Savol</span>
+              </div>
+              <button class="btn btn-primary start-test">
+                Testni boshlash
+              </button>
+            </div>
+
+            <div class="test-card">
+              <div class="test-header">
+                <h3>Mantiqiy Masalalar</h3>
+                <span class="test-duration">45 daqiqa</span>
+              </div>
+              <p class="test-description">
+                Mantiqiy fikrlash va masalalarni yechish
+              </p>
+              <div class="test-meta">
+                <span class="test-level">Logic</span>
+                <span class="test-questions">30 Savol</span>
+              </div>
+              <button class="btn btn-primary start-test">
+                Testni boshlash
+              </button>
+            </div>
+            <div class="test-card">
+              <div class="test-header">
+                <h3>Kibernetika</h3>
+                <span class="test-duration">60 daqiqa</span>
+              </div>
+              <p class="test-description">
+                Kibernetika va uning asosiy tushunchalari
+              </p>
+              <div class="test-meta">
+                <span class="test-level">Mathematics</span>
+                <span class="test-questions">30 Savol</span>
+              </div>
+              <button class="btn btn-primary start-test">
+                Testni boshlash
+              </button>
+            </div>
+            <div class="test-card">
+              <div class="test-header">
+                <h3>HTML & CSS Asoslari</h3>
+                <span class="test-duration">30 daqiqa</span>
+              </div>
+              <p class="test-description">
+                Html va Css asoslari va ularning qo'llanilishi
+              </p>
+              <div class="test-meta">
+                <span class="test-level">Programming</span>
+                <span class="test-questions">20 Savol</span>
+              </div>
+              <button class="btn btn-primary start-test">
+                Testni boshlash
+              </button>
+            </div>
+            <div class="test-card">
+              <div class="test-header">
+                <h3>Algoritmlar Asoslari</h3>
+                <span class="test-duration">45 daqiqa</span>
+              </div>
+              <p class="test-description">
+                Algoritmlar asoslari va ularning qo'llanilishi
+              </p>
+              <div class="test-meta">
+                <span class="test-level">Programming</span>
+                <span class="test-questions">25 Savol</span>
+              </div>
+              <button class="btn btn-primary start-test">
+                Testni boshlash
+              </button>
+            </div>
+            <div class="test-card">
+              <div class="test-header">
+                <h3>Kognitiv Mantiq</h3>
+                <span class="test-duration">60 daqiqa</span>
+              </div>
+              <p class="test-description">
+                Kognitiv mantiq va ularning asosiy tushunchalari
+              </p>
+              <div class="test-meta">
+                <span class="test-level">Logic</span>
+                <span class="test-questions">30 Savol</span>
+              </div>
+              <button class="btn btn-primary start-test">
+                Testni boshlash
+              </button>
+            </div>
+            <div class="test-card">
+                <div class="test-header">
+                    <h3>Kombinatorika</h3>
+                    <span class="test-duration">30 daqiqa</span>
+                </div>
+                <p class="test-description">
+                    Kombinatorika va uning asosiy tushunchalari
+                </p>
+                <div class="test-meta">
+                    <span class="test-level">Mathematics</span>
+                    <span class="test-questions">20 Savol</span>
+                </div>
+                <button class="btn btn-primary start-test">
+                    Testni boshlash
+                </button>
+            </div>
+            <div class="test-card">
+                <div class="test-header">
+                    <h3>IQ va Analitik Fikrlash</h3>
+                    <span class="test-duration">45 daqiqa</span>
+                </div>
+                <p class="test-description">
+                    IQ va analitik fikrlash qobiliyatlari
+                </p>
+                <div class="test-meta">
+                    <span class="test-level">Logic</span>
+                    <span class="test-questions">25 Savol</span>
+                </div>
+                <button class="btn btn-primary start-test">
+                    Testni boshlash
+                </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="test-modal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Test Instructions</h2>
+            <button class="close-modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="test-info">
+              <h3>JavaScript Basics</h3>
+              <ul class="test-instructions">
+                <li>Total Questions: 20</li>
+                <li>Time Limit: 30 minutes</li>
+                <li>Passing Score: 70%</li>
+                <li>No negative marking</li>
+              </ul>
+            </div>
+            <div class="test-actions">
+              <button class="btn btn-secondary">Review Instructions</button>
+              <button class="btn btn-primary">Begin Test</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>About TestPro</h4>
+            <p>Your trusted platform for online testing and assessment.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Dashboard</a></li>
+              <li><a href="index.html#tests">Tests</a></li>
+              <li><a href="results.html">Results</a></li>
+              <li><a href="profile.html">Profile</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <p>Email: support@testpro.com</p>
+            <p>Phone: (123) 456-7890</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; <span id="year"></span> TestPro. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
