@@ -1,118 +1,122 @@
 <!DOCTYPE html>
-<html lang="uz">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="uz" class="light-theme">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test - TestPro</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <style>
-        .test-container {
-            max-width: 800px;
-            margin: 100px auto;
-            padding: 20px;
-        }
+      .test-container {
+        max-width: 800px;
+        margin: 100px auto;
+        padding: 20px;
+      }
 
-        .test-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-        }
+      .test-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+      }
 
-        .timer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 10px 20px;
-            border-radius: var(--border-radius);
-            font-size: 1.2rem;
-        }
+      .timer {
+        background-color: var(--primary-color);
+        color: var(--light-background);
+        padding: 10px 20px;
+        border-radius: var(--border-radius);
+        font-size: 1.2rem;
+      }
 
-        .question-container {
-            background-color: white;
-            padding: 20px;
-            border-radius: var(--border-radius);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
+      .question-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: var(--border-radius);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
 
-        .question-text {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
+      .question-text {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
 
-        .options {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+      .options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
 
-        .option {
-            padding: 15px;
-            border: 1px solid var(--border-color);
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            transition: var(--transition);
-        }
+      .option {
+        padding: 15px;
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: var(--transition);
+      }
 
-        .option:hover {
-            background-color: var(--light-background);
-        }
+      .option:hover {
+        background-color: var(--light-background);
+      }
 
-        .option.selected {
-            background-color: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
-        }
+      .option.selected {
+        background-color: var(--primary-color);
+        color: white;
+        border-color: var(--primary-color);
+      }
 
-        .test-controls {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-        }
+      .test-controls {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+      }
 
-        .progress-bar {
-            width: 100%;
-            height: 10px;
-            background-color: var(--light-background);
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
+      .progress-bar {
+        width: 100%;
+        height: 10px;
+        background-color: var(--light-background);
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
 
-        .progress {
-            height: 100%;
-            background-color: var(--primary-color);
-            border-radius: 5px;
-            transition: width 0.3s ease;
-        }
+      .progress {
+        height: 100%;
+        background-color: var(--primary-color);
+        border-radius: 5px;
+        transition: width 0.3s ease;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body class="light-theme">
     <div class="test-container">
-        <div class="test-header">
-            <h1 id="test-title">Test</h1>
-            <div class="timer" id="timer">30:00</div>
-        </div>
+      <div class="test-header">
+        <h1 id="test-title">Test</h1>
+        <div class="timer" id="timer">30:00</div>
+      </div>
 
-        <div class="progress-bar">
-            <div class="progress" id="progress"></div>
-        </div>
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
 
-        <div class="question-container">
-            <div class="question-text" id="question-text">
-                Savol matni bu yerda ko'rsatiladi
-            </div>
-            <div class="options" id="options">
-                <!-- Variantlar JavaScript orqali qo'shiladi -->
-            </div>
+      <div class="question-container">
+        <div class="question-text" id="question-text">
+          Savol matni bu yerda ko'rsatiladi
         </div>
+        <div class="options" id="options">
+          <!-- Variantlar JavaScript orqali qo'shiladi -->
+        </div>
+      </div>
 
-        <div class="test-controls">
-            <button class="btn btn-secondary" id="prev-btn">Oldingi</button>
-            <button class="btn btn-primary" id="next-btn">Keyingi</button>
-        </div>
+      <div class="test-controls">
+        <button class="btn btn-secondary" id="prev-btn">Oldingi</button>
+        <button class="btn btn-primary" id="next-btn">Keyingi</button>
+      </div>
     </div>
 
-    <script defer src="https://va.vercel-scripts.com/v1/script.debug.js" data-sdkn="vercel-analytics"></script>
+    <script
+      defer
+      src="https://va.vercel-scripts.com/v1/script.debug.js"
+      data-sdkn="vercel-analytics"
+    ></script>
     <script src="test.js"></script>
-</body>
-</html> 
+  </body>
+</html>

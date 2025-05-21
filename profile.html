@@ -7,6 +7,91 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Profil - TestPro</title>
     <style>
+      :root {
+        --bg-color: #ffffff;
+        --text-color: #333333;
+        --card-bg: #ffffff;
+        --shadow-color: rgba(0, 0, 0, 0.1);
+        --border-color: #e0e0e0;
+        --primary-color: #007bff;
+      }
+
+      /* .light-theme {
+        --bg-color: #ffffff;
+        --text-color: #333333;
+        --card-bg: #ffffff;
+        --shadow-color: rgba(0, 0, 0, 0.1);
+        --border-color: #e0e0e0;
+        --primary-color: #007bff;
+      }
+
+      .dark-theme {
+        --bg-color: #121212;
+        --text-color: #ffffff;
+        --card-bg: #1e1e1e;
+        --shadow-color: rgba(255, 255, 255, 0.1);
+        --border-color: #444444;
+        --primary-color: #40c4ff;
+      }
+
+      .blue-theme {
+        --bg-color: #e6f3ff;
+        --text-color: #003087;
+        --card-bg: #d6eaff;
+        --shadow-color: rgba(0, 0, 0, 0.1);
+        --border-color: #b0c4de;
+        --primary-color: #003087;
+      } */
+
+      body {
+        /* background-color: var(--bg-color); */
+        /* color: var(--text-color); */
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .header,
+      .footer,
+      .stat-card,
+      .profile-section,
+      .modal-content {
+        background-color: var(--card-bg);
+        color: var(--text-color);
+        box-shadow: 0 2px 4px var(--shadow-color);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .profile-header {
+        background-color: var(--card-bg);
+        box-shadow: 0 2px 4px var(--shadow-color);
+      }
+
+      .profile-email {
+        color: var(--text-color);
+        opacity: 0.7;
+      }
+
+      .stat-number {
+        color: var(--primary-color);
+      }
+
+      .section-title {
+        border-bottom: 2px solid var(--border-color);
+      }
+
+      .achievement {
+        border: 1px solid var(--border-color);
+      }
+
+      .btn-primary {
+        background-color: var(--primary-color);
+        color: #ffffff;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--primary-color);
+        filter: brightness(90%);
+      }
 
       .profile-container {
         max-width: 1000px;
@@ -19,10 +104,8 @@
         align-items: center;
         gap: 30px;
         margin-bottom: 40px;
-        background-color: white;
         padding: 30px;
         border-radius: var(--border-radius);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
 
       .profile-avatar {
@@ -47,11 +130,6 @@
         margin-bottom: 10px;
       }
 
-      .profile-email {
-        color: var(--text-secondary);
-        margin-bottom: 20px;
-      }
-
       .profile-stats {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -59,39 +137,16 @@
         margin-bottom: 40px;
       }
 
-      .stat-card {
-        background-color: white;
-        padding: 20px;
-        border-radius: var(--border-radius);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        text-align: center;
-      }
-
-      .stat-number {
-        font-size: 2rem;
-        font-weight: bold;
-        color: var(--primary-color);
-        margin: 10px 0;
-      }
-
       .profile-sections {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        gap: 30px;
-      }
-
-      .profile-section {
-        background-color: white;
-        padding: 30px;
-        border-radius: var(--border-radius);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        /* gap: 30px; */
       }
 
       .section-title {
         font-size: 1.5rem;
         margin-bottom: 20px;
         padding-bottom: 10px;
-        border-bottom: 2px solid var(--border-color);
       }
 
       .achievement-list {
@@ -103,7 +158,6 @@
       .achievement {
         text-align: center;
         padding: 15px;
-        border: 1px solid var(--border-color);
         border-radius: var(--border-radius);
       }
 
@@ -176,7 +230,6 @@
       }
 
       @media (max-width: 768px) {
-     
         .profile-sections {
           grid-template-columns: 1fr;
         }
@@ -195,10 +248,10 @@
           <a href="/">TestPro</a>
         </div>
         <ul class="nav-links">
-          <li><a href="index.html">Dashboard</a></li>
-          <li><a href="index.html#tests">Tests</a></li>
-          <li><a href="results.html">Results</a></li>
-          <li><a href="profile.html">Profile</a></li>
+          <li><a href="index.html">Asosiy Sahifa</a></li>
+          <li><a href="index.html#tests">Testlar</a></li>
+          <li><a href="results.html">Natijalar</a></li>
+          <li><a href="profile.html">Profil</a></li>
         </ul>
         <button class="mobile-menu-btn" aria-label="Toggle menu">
           <span></span>
@@ -263,18 +316,7 @@
                     Email xabarnomalar
                   </label>
                 </div>
-                <div class="form-group">
-                  <label class="checkbox-label">
-                    <input type="checkbox" name="dark-mode" />
-                    Qorong'i rejim
-                  </label>
-                </div>
-                <div class="form-group">
-                  <label class="checkbox-label">
-                    <input type="checkbox" name="uzbek-language" />
-                    O'zbek tili
-                  </label>
-                </div>
+
                 <div class="form-group">
                   <label class="checkbox-label">
                     <input type="checkbox" name="sound-effects" />
@@ -323,25 +365,34 @@
         <div class="footer-content">
           <div class="footer-section">
             <h4>TestPro haqida</h4>
-            <p>Online test va baholash platformasi.</p>
+            <p>
+              Onlayn sinov va baholash uchun ishonchli platformangiz. O'zingizni
+              natijangizni bilib oling.
+            </p>
           </div>
           <div class="footer-section">
-            <h4>Tezkor Havolalar</h4>
+            <h4>Tezkor havolalar</h4>
             <ul>
-              <li><a href="index.html">Dashboard</a></li>
-              <li><a href="index.html#tests">Tests</a></li>
-              <li><a href="results.html">Results</a></li>
-              <li><a href="profile.html">Profile</a></li>
+              <li><a href="index.html">Asosiy Sahifa</a></li>
+              <li><a href="index.html#tests">Testlar</a></li>
+              <li><a href="results.html">Natijalar</a></li>
+              <li><a href="profile.html">Profil</a></li>
             </ul>
           </div>
           <div class="footer-section">
             <h4>Aloqa</h4>
-            <p>Biz bilan bog'laning: <a href="mailto:support@testpro.com">support@testpro.com</a></p>
-            <p>Telefon: <a href="tel:(123) 456-7890">(123) 456-7890"</a></p>
+            <p>
+              TestPro, 1234 Test Street, Tashkent, Uzbekistan. <br />
+              Email: support@testpro.com <br />
+              Telefon: (123) 456-7890
+            </p>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; <span id="year" ></span> TestPro. All rights reserved.</p>
+          <p>
+            &copy; <span id="year"></span> TestPro. Barcha huquqlar
+            himoyalangan.
+          </p>
         </div>
       </div>
     </footer>
@@ -355,7 +406,11 @@
       });
     </script>
 
-    <script defer src="https://va.vercel-scripts.com/v1/script.debug.js" data-sdkn="vercel-analytics"></script>
+    <script
+      defer
+      src="https://va.vercel-scripts.com/v1/script.debug.js"
+      data-sdkn="vercel-analytics"
+    ></script>
     <script src="profile.js"></script>
   </body>
 </html>
