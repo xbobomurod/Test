@@ -215,8 +215,14 @@
 		const savedTheme = localStorage.getItem("theme") || "light"
 
 		function applyTheme(theme) {
-			document.body.classList.remove("light-theme", "dark-theme", "blue-theme")
-			document.body.classList.add(theme + "-theme")
+			document.body.classList.remove('light-theme', 'dark-theme', 'blue-theme')
+			if (theme === 'dark') {
+				document.body.classList.add('dark-theme')
+			} else if (theme === 'blue') {
+				document.body.classList.add('blue-theme')
+			} else {
+				document.body.classList.add('light-theme')
+			}
 		}
 
 		// Sahifa ochilganda avtomatik qo'llash
@@ -225,3 +231,4 @@
 </body>
 
 </html>
+
