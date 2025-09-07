@@ -1,194 +1,227 @@
+
 <!DOCTYPE html>
-<html lang="uz" class="light-theme">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test - TestPro</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --primary-color: #4f46e5;
-        --secondary-color: #6366f1;
-        --light-background: #f9fafb;
-        --border-color: #e5e7eb;
-        --border-radius: 10px;
-        --transition: all 0.3s ease;
-      }
+<html lang="uz">
 
-      body {
-        margin: 0;
-        font-family: "Poppins", sans-serif;
-        background: linear-gradient(135deg, #eef2ff, #f9fafb);
-        color: #111827;
-      }
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Test - TestPro</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+	<style>
+		/* ========== Light Theme ========== */
+		.light-theme {
+			--primary-color: #4f46e5;
+			--secondary-color: #6366f1;
+			--light-background: #f9fafb;
+			--border-color: #e5e7eb;
+			--bg-color: #ffffff;
+			--text-color: #111827;
+		}
 
-      .test-container {
-        max-width: 800px;
-        margin: 60px auto;
-        padding: 30px;
-        background: white;
-        border-radius: 16px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      }
+		/* ========== Dark Theme ========== */
+		.dark-theme {
+			--primary-color: #40c4ff;
+			--secondary-color: #2196f3;
+			--light-background: #1e293b;
+			--border-color: #334155;
+			--bg-color: #0f172a;
+			--text-color: #f1f5f9;
+		}
 
-      .test-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 25px;
-      }
+		/* ========== Blue Theme ========== */
+		.blue-theme {
+			--primary-color: #003087;
+			--secondary-color: #0056b3;
+			--light-background: #e6f3ff;
+			--border-color: #b0c4de;
+			--bg-color: #d6eaff;
+			--text-color: #001845;
+		}
 
-      .test-header h1 {
-        font-size: 1.8rem;
-        font-weight: 600;
-        color: var(--primary-color);
-      }
+		body {
+			margin: 0;
+			font-family: "Poppins", sans-serif;
+			background: var(--bg-color);
+			color: var(--text-color);
+			transition: background 0.3s ease, color 0.3s ease;
+		}
 
-      .timer {
-        background: var(--primary-color);
-        color: white;
-        padding: 10px 18px;
-        border-radius: 8px;
-        font-size: 1rem;
-        font-weight: 600;
-        box-shadow: 0 2px 6px rgba(79, 70, 229, 0.4);
-      }
+		.test-container {
+			max-width: 800px;
+			margin: 80px auto 40px;
+			padding: 30px;
+			background: var(--light-background);
+			border-radius: 16px;
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+		}
 
-      .progress-bar {
-        width: 100%;
-        height: 10px;
-        background-color: var(--light-background);
-        border-radius: 5px;
-        margin-bottom: 20px;
-        overflow: hidden;
-      }
+		.test-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 25px;
+		}
 
-      .progress {
-        height: 100%;
-        background: linear-gradient(
-          90deg,
-          var(--primary-color),
-          var(--secondary-color)
-        );
-        border-radius: 5px;
-        transition: width 0.4s ease;
-      }
+		.test-header h1 {
+			font-size: 1.8rem;
+			font-weight: 600;
+			color: var(--primary-color);
+		}
 
-      .question-container {
-        background-color: white;
-        padding: 20px;
-        border-radius: var(--border-radius);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-        margin-bottom: 25px;
-      }
+		.timer {
+			background: var(--primary-color);
+			color: white;
+			padding: 10px 18px;
+			border-radius: 8px;
+			font-size: 1rem;
+			font-weight: 600;
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+		}
 
-      .question-text {
-        font-size: 1.2rem;
-        font-weight: 500;
-        margin-bottom: 20px;
-        color: #1f2937;
-      }
+		.progress-bar {
+			width: 100%;
+			height: 10px;
+			background-color: var(--border-color);
+			border-radius: 5px;
+			margin-bottom: 20px;
+			overflow: hidden;
+		}
 
-      .options {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
+		.progress {
+			height: 100%;
+			background: linear-gradient(90deg,
+					var(--primary-color),
+					var(--secondary-color));
+			border-radius: 5px;
+			transition: width 0.4s ease;
+		}
 
-      .option {
-        padding: 14px;
-        border: 2px solid var(--border-color);
-        border-radius: 8px;
-        cursor: pointer;
-        transition: var(--transition);
-        font-size: 1rem;
-      }
+		.question-container {
+			background-color: var(--bg-color);
+			padding: 20px;
+			border-radius: 12px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+			margin-bottom: 25px;
+		}
 
-      .option:hover {
-        border-color: var(--secondary-color);
-        background-color: #eef2ff;
-      }
+		.question-text {
+			font-size: 1.2rem;
+			font-weight: 500;
+			margin-bottom: 20px;
+			color: var(--text-color);
+		}
 
-      .option.selected {
-        background: var(--primary-color);
-        color: white;
-        border-color: var(--primary-color);
-        font-weight: 600;
-        box-shadow: 0 4px 8px rgba(79, 70, 229, 0.4);
-      }
+		.options {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+		}
 
-      .test-controls {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 30px;
-      }
+		.option {
+			padding: 14px;
+			border: 2px solid var(--border-color);
+			border-radius: 8px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			font-size: 1rem;
+		}
 
-      .btn {
-        padding: 12px 24px;
-        border-radius: 8px;
-        font-size: 1rem;
-        font-weight: 500;
-        cursor: pointer;
-        transition: var(--transition);
-        border: none;
-      }
+		.option:hover {
+			border-color: var(--secondary-color);
+			background-color: var(--light-background);
+		}
 
-      .btn-primary {
-        background: var(--primary-color);
-        color: white;
-        box-shadow: 0 4px 10px rgba(79, 70, 229, 0.4);
-      }
+		.option.selected {
+			background: var(--primary-color);
+			color: white;
+			border-color: var(--primary-color);
+			font-weight: 600;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		}
 
-      .btn-primary:hover {
-        background: var(--secondary-color);
-      }
+		.test-controls {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 30px;
+		}
 
-      .btn-secondary {
-        background: #e5e7eb;
-        color: #111827;
-      }
+		.btn {
+			padding: 12px 24px;
+			border-radius: 8px;
+			font-size: 1rem;
+			font-weight: 500;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			border: none;
+		}
 
-      .btn-secondary:hover {
-        background: #d1d5db;
-      }
+		.btn-primary {
+			background: var(--primary-color);
+			color: white;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+		}
 
-      .btn:disabled {
-        background: #f3f4f6;
-        color: #9ca3af;
-        cursor: not-allowed;
-        box-shadow: none;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="test-container">
-      <div class="test-header">
-        <h1 id="test-title">Test</h1>
-        <div class="timer" id="timer">30:00</div>
-      </div>
+		.btn-primary:hover {
+			background: var(--secondary-color);
+		}
 
-      <div class="progress-bar">
-        <div class="progress" id="progress"></div>
-      </div>
+		.btn-secondary {
+			background: var(--border-color);
+			color: var(--text-color);
+		}
 
-      <div class="question-container">
-        <div class="question-text" id="question-text">
-          Savol matni bu yerda ko'rsatiladi
-        </div>
-        <div class="options" id="options">
-          <!-- Variantlar JavaScript orqali qo'shiladi -->
-        </div>
-      </div>
+		.btn-secondary:hover {
+			opacity: 0.9;
+		}
 
-      <div class="test-controls">
-        <button class="btn btn-secondary" id="prev-btn">Oldingi</button>
-        <button class="btn btn-primary" id="next-btn">Keyingi</button>
-      </div>
-    </div>
+		.btn:disabled {
+			background: #9ca3af;
+			color: #e5e7eb;
+			cursor: not-allowed;
+			box-shadow: none;
+		}
+	</style>
+</head>
 
-    <script src="test.js"></script>
-  </body>
+<body>
+	<div class="test-container">
+		<div class="test-header">
+			<h1 id="test-title">Test</h1>
+			<div class="timer" id="timer">30:00</div>
+		</div>
+
+		<div class="progress-bar">
+			<div class="progress" id="progress"></div>
+		</div>
+
+		<div class="question-container">
+			<div class="question-text" id="question-text">
+				Savol matni bu yerda ko'rsatiladi
+			</div>
+			<div class="options" id="options">
+				<!-- Variantlar JavaScript orqali qo'shiladi -->
+			</div>
+		</div>
+
+		<div class="test-controls">
+			<button class="btn btn-secondary" id="prev-btn">Oldingi</button>
+			<button class="btn btn-primary" id="next-btn">Keyingi</button>
+		</div>
+	</div>
+
+	<script src="test.js"></script>
+	<script>
+		// Profile sahifasida tanlangan theme'ni olish
+		const savedTheme = localStorage.getItem("theme") || "light"
+
+		function applyTheme(theme) {
+			document.body.classList.remove("light-theme", "dark-theme", "blue-theme")
+			document.body.classList.add(theme + "-theme")
+		}
+
+		// Sahifa ochilganda avtomatik qo'llash
+		applyTheme(savedTheme);
+	</script>
+</body>
+
 </html>
