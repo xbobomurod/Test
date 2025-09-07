@@ -209,67 +209,10 @@
 	</div>
 
 	<script src="test.js"></script> 
-	<script>
-// Standart foydalanuvchi sozlamalari
-const defaultSettings = {
-  emailNotifications: true,
-  soundEffects: true,
-  autoSave: true,
-  fontSize: "medium",
-  theme: "light",
-};
-
-// Foydalanuvchi sozlamalarini yuklash
-function loadSettings() {
-  const localSettings = localStorage.getItem("userSettings");
-  return localSettings ? JSON.parse(localSettings) : { ...defaultSettings };
-}
-
-// Foydalanuvchi sozlamalarini saqlash
-function saveSettings(settings) {
-  try {
-    localStorage.setItem("userSettings", JSON.stringify(settings));
-    return true;
-  } catch (error) {
-    console.error("Sozlamalarni saqlashda xatolik:", error);
-    return false;
-  }
-}
-
-// Tema qo'llash funksiyasini yangilaymiz
-function applyTheme(theme) {
-  // Barcha sahifalarda ishlashi uchun document.body o'rniga document.documentElement ishlatamiz
-  const root = document.documentElement;
-  root.classList.remove("light-theme", "dark-theme", "blue-theme");
-  
-  // Agar theme parametri berilmagan bo'lsa, settings'dan olamiz
-  const themeToApply = theme || loadSettings().theme;
-  
-  if (themeToApply === "dark") {
-    root.classList.add("dark-theme");
-  } else if (themeToApply === "blue") {
-    root.classList.add("blue-theme");
-  } else {
-    root.classList.add("light-theme");
-  }
-}
-
-// Shrift o'lchamini qo'llash
-function applyFontSize(fontSize) {
-  document.body.style.fontSize =
-    fontSize === "small" ? "14px" : fontSize === "medium" ? "16px" : "20px";
-}
-
-// Sozlamalarni qo'llash
-function applySettings() {
-  const settings = loadSettings();
-  applyTheme(settings.theme);
-  applyFontSize(settings.fontSize);
-}
-	</script>
 </body>
 
 </html>
+
 
 
 
